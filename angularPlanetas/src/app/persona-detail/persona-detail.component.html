@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <br><br>
+  <div class="container">
+    <div class="panel panel-default" style="width: 60%">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>{{ response.nombre }}</h3>
+            <br>
+            <span class="glyphicon glyphicon-user" style="font-size:200px;"></span>
+            <br>
+          </div>
+          <div class="col-sm-5">
+            <br><br>
+            <div *ngIf="response">
+              <p><strong>Edad: </strong>{{ response.edad }}</p>
+              <p><strong>Altura: </strong>{{ response.altuta }}</p>
+              <p><strong>Peso: </strong>{{ response.peso }}</p>
+              <p><strong>Genero: </strong>{{ response.genero }}</p>
+              <p><strong>Fecha Nacimiento: </strong>{{ response.fecha_nacimiento }}</p>
+              <p><strong>Cantidad Visitas: </strong>{{ response.cantidad_visitas }}</p>
+              <p><strong>Nombre planeta: </strong>{{ response.nombre_planeta }}</p>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <button type="button" class="btn btn-warning" (click)="getAtrasPersonas()" >Atras</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+
+
+

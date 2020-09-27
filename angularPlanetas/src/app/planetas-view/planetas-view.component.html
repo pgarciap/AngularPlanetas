@@ -1,0 +1,31 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container" >
+    <h1 class="text-danger text-center"><strong>Lista Planetas</strong></h1>
+        <br>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <th class="text-center">#</th>
+            <th class="text-center">Nombre Planeta</th>
+            <th class="text-center">Cantidad personas</th>
+            <th class="text-center">Detail</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let planeta of myresponse; index as i">
+              <td scope="row" class="text-center">{{i+1}}</td>
+              <td class="text-center">{{planeta.nombre}}</td>
+              <td class="text-center">{{planeta.cantidad_personas}}</td>
+              <td class="text-center">
+                <button class="btn-center" class="btn btn-primary" (click)="getDetallesPlanetaID(planeta.id_planeta)" >Detail</button>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</body>

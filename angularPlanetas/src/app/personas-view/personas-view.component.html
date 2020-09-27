@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-danger text-center"><Strong>Lista Personas</Strong></h1>
+        <br>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <th class="text-center">#</th>
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Cantidad visitas</th>
+            <th class="text-center">Nombre Planeta</th>
+            <th class="text-center">Detail</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let persona of myresponse; index as i">
+              <td scope="row">{{i+1}}</td>
+              <td class="text-center">{{persona.nombre}}</td>
+              <td class="text-center">{{persona.cantidad_visitas}}</td>
+              <td class="text-center">{{persona.nombre_planeta}}</td>
+              <td class="text-center">
+                <button class="btn btn-primary" (click)="getDetallesPer(persona.id_persona)" >Detail</button>
+            </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</body>
